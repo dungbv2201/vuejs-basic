@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="style-dice.css">
+        
+        <title>Dice Game</title>
+    </head>
+
+    <body>
+        <div class="wrapper clearfix">
+            <div class="player-panel winner">
+                <div class="player-name">Player1</div>
+                <div class="player-score">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Total score</div>
+                    <div class="player-current-score">11</div>
+                </div>
+            </div>
+            
+            <div class="player-panel winner">
+                <div class="player-name">Player 2</div>
+                <div class="player-score">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Total score</div>
+                    <div class="player-current-score">0</div>
+                </div>
+            </div>
+           
+            <button class="control btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            
+            <div id="dice-1" class="dice">
+                <div class="spinner dice-3">
+                    <div class="face1">1</div>
+                    <div class="face2">2</div>
+                    <div class="face3">3</div>
+                    <div class="face4">4</div>
+                    <div class="face5">5</div>
+                    <div class="face6">6</div>
+                </div>
+            </div>
+            <div id="dice-2" class="dice">
+                <div class="spinner dice-6">
+                    <div class="face1">1</div>
+                    <div class="face2">2</div>
+                    <div class="face3">3</div>
+                    <div class="face4">4</div>
+                    <div class="face5">5</div>
+                    <div class="face6">6</div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </body>
+</html>
