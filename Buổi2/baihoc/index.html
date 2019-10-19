@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <a :href="google">google2</a>
+    <p v-text="body"></p>
+    <p v-html="body"></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data:{
+            google: "google.com",
+            body:"<strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, soluta.</strong>"
+        }
+    })
+</script>
+</body>
+</html>
