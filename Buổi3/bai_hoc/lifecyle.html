@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div id="app">
+   <div class="container">
+       <div class="row" id="demo">
+           <div class="col-sm-6 justify-content-center">
+               <table class="table">
+                   <thead>
+                   <tr>
+                       <th scope="col">#</th>
+                       <th scope="col">Name</th>
+                       <th scope="col">Age</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr v-for="(user,index) in users" :key="index" class="rowss">
+                       <th scope="row"></th>
+                       <td>{{ user.name }}</td>
+                       <td>{{ user.age }}</td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+           <div>
+               <button class="success" @click="getListUser()">get user</button>
+           </div>
+       </div>
+   </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    data:{
+        users:[]
+    },
+    mounted(){
+      // this.getListUser()
+      // document.getElementsByClassName('rowss')[1].style.background = 'red'
+    },
+    created(){
+        this.getListUser()
+       document.getElementsByClassName('rowss')[0].style.background = 'red'
+    },
+    methods:{
+      getListUser(){
+        this.users =[
+          {
+            name:'user1',
+            age:20
+          },
+          {
+            name:'user2',
+            age:21
+          }
+        ]
+      }
+    }
+  })
+</script>
+</body>
+</html>

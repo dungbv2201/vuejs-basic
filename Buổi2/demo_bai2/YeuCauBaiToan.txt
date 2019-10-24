@@ -1,0 +1,6 @@
+- Khi chưa chơi sẽ hiện nút setting còn khi bắt đầu chơi sẽ ẩn đi , game kết thúc sẽ cho hiện lại
+- setting:
+	+ thiết lập đc tên 2 người chơi
+	+ thiết lập đc số lượt chơi( chú ý validate phải là số chẵn nguyên dương, nếu thiết lập sai sẽ alert ra thông báo"thiết lập sai" và không cho bắt đầu trò chơi)
+	+ thiết lập đc ai chơi trước
+	

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row" id="demo">
+            <button-counter demo="100px" :title="30">
+                <template v-slot:number>
+                    <h1>Count</h1>
+                </template>
+                <strong>button1</strong>
+            </button-counter>
+            <button-counter >
+                button2
+            </button-counter>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+  Vue.component('button-counter', {
+    data:function () {
+      return{
+        count:0
+      }
+    },
+    props: {
+      title:{
+        require: false,
+        type: Number,
+        validator (value) {
+          return value % 2 == 0? true:false
+        }
+      },
+      demo:{
+        require: false,
+        type: String,
+        default: 400+'px'
+      }
+    },
+    template: '<div><button @click="countNumber()" class="btn btn-success" :style="{ width: demo}"> <slot></slot></button>' +
+      '<div><slot name="number"></slot>{{ count }}</div></div>',
+    methods:{
+      countNumber(){
+        this.count++
+      }
+    }
+  })
+  new Vue({
+    el: "#app",
+    data:{
+      users:[]
+    },
+    methods:{
+
+    }
+  })
+</script>
+</body>
+</html>
