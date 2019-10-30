@@ -7,10 +7,18 @@ export function getPostApi() {
   })
 }
 
-export function createPost(data) {
+// export function createPost(data) {
+//   return request({
+//     url:'/posts',
+//     method: 'get',
+//     data
+//   })
+// }
+
+export function updatePostApi(id,data) {
   return request({
-    url:'/posts',
-    method: 'get',
+    url: `/posts/${id}`,
+    method: 'put',
     data
   })
 }
