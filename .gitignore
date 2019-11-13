@@ -1,1 +1,4 @@
 .idea
+/Buoi4/demo-webpack/node_modules/
+/Buoi4/list-component/node_modules/
+/Buoi7/demo-vue-router/node_modules/

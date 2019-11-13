@@ -2,7 +2,7 @@ import request from "../util/request";
 
 export function getPostApi() {
   return request({
-    url:'/posts',
+    url:'https://peaceful-sands-42159.herokuapp.com/api/products',
     method: 'get'
   })
 }
