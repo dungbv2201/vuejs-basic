@@ -2,18 +2,23 @@
    <div>
        <h1>User Detail</h1>
        <button class="btn btn-success" @click="backToUser()">back to users</button>
-       <h2>{{ id }}</h2>
-       <h2>{{ $route.params.name }}</h2>
+        <Counter :count="1" @increment="count = $event" @decrement="count = $event"></Counter>
+       <h1>{{ count }}</h1>
    </div>
 </template>
 
 <script>
+    import Counter from "../../components/Counter";
   export default {
     name: "UserDetail",
     data(){
       return{
-        id: this.$route.params.id
+        id: this.$route.params.id,
+        count: 1
       }
+    },
+    components:{
+      Counter
     },
     beforeRouteEnter(to, from, next){
       next()
