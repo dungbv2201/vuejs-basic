@@ -1,0 +1,17 @@
+$colors: (
+        "orange": $orange,
+        "green": $green,
+        "blue": $blue,
+        "red": $red,
+        "yellow": $yellow,
+        "gray": $gray
+);
+
+@each $name, $colorCode in $colors {
+  .btn-#{$name} {
+    background: $colorCode;
+    color: #fff;
+    box-shadow: 0 3px 6px #00000029;
+    min-width: 100px;
+  }
+}

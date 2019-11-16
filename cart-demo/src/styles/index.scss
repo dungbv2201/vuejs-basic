@@ -1,0 +1,17 @@
+@import "loading";
+@import "variable";
+@import "button";
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+.price{
+  font-size: 24px;
+  color: $orange;
+  font-weight: bold;
+}
+.sale-off{
+  text-decoration: line-through;
+  font-size: 20px;
+  margin-top: 5px;
+}
