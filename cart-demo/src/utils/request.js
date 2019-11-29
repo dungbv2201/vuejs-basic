@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const request = axios.create({
-  baseURL: 'https://peaceful-sands-42159.herokuapp.com/api',
+  baseURL: 'http://13.229.233.177/demo-cart/public/api',
   timeout: 3000
 });
 

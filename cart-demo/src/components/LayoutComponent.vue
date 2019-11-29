@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="w-100">
+            <div class="w-100" style="position:fixed;z-index:3">
                 <HeaderLayout></HeaderLayout>
             </div>
-            <router-view></router-view>
+            <router-view :key="$route.fullPath"></router-view>
         </div>
     </div>
 </template>
